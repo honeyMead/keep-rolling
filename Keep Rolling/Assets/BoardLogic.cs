@@ -10,7 +10,10 @@ public class BoardLogic : MonoBehaviour
 
     void Update()
     {
-        RotateBoard();
+        if (Time.timeSinceLevelLoad > 1.5)
+        {
+            RotateBoard();
+        }
     }
 
     private void RotateBoard()
