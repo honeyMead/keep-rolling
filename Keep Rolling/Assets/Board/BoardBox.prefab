@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRotationEuler: 15
-  RotationSpeed: 12
+  RotationSpeed: 13
 --- !u!65 &1356209069824424645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a266364e632a1524e9e104dc4b467dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
 --- !u!1 &1356209070474724752
 GameObject:
   m_ObjectHideFlags: 0
