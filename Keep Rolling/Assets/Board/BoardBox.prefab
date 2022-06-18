@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRotationEuler: 10
-  RotationSpeed: 13
+  RotationSpeed: 15
 --- !u!65 &1356209069824424645
 BoxCollider:
   m_ObjectHideFlags: 0
