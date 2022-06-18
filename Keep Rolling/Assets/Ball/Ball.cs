@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public GameController controller;
+    private GameController controller;
+
+    void Start()
+    {
+        controller = GameObject.FindWithTag("GameController")
+            .GetComponent<GameController>();
+    }
 
     void Update()
     {
