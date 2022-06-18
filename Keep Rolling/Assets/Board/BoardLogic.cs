@@ -24,7 +24,11 @@ public class BoardLogic : MonoBehaviour
 
         var targetX = xPercent * MaxRotationEuler;
         var targetZ = zPercent * MaxRotationEuler;
-        currentEulerAngles += RotationSpeed * Time.deltaTime * new Vector3(targetX, 0f, targetZ);
+
+        var differenceToX = targetX - currentEulerAngles.x;
+        var differenceToZ = targetZ - currentEulerAngles.z;
+
+        currentEulerAngles += RotationSpeed * Time.deltaTime * new Vector3(differenceToX, 0f, differenceToZ);
 
         currentEulerAngles.x = LimitAngleToMaximum(currentEulerAngles.x);
         currentEulerAngles.z = LimitAngleToMaximum(currentEulerAngles.z);
