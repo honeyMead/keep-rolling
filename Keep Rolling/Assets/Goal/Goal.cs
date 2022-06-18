@@ -4,11 +4,12 @@ public class Goal : MonoBehaviour
 {
     public GameController controller;
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            controller.RestartLevel();
+            Debug.Log("goal");
+            controller.NextLevel();
         }
     }
 }

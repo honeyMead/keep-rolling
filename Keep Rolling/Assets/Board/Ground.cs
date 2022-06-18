@@ -8,6 +8,7 @@ public class Ground : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("ground");
             controller.RestartLevel();
         }
     }
