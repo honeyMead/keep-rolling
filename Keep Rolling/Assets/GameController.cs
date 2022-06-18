@@ -1,16 +1,22 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public static int Tries = 0;
+    private static float TimeSinceGameRunStart = 0f;
+
     private TextMeshProUGUI subMessage;
+    private TextMeshProUGUI buttonMessage;
     private static bool isGameWon = false;
     private static GameObject canvas;
 
     void Start()
     {
         subMessage = GameObject.FindWithTag("SubMessage").GetComponent<TextMeshProUGUI>();
+        buttonMessage = GameObject.FindWithTag("ButtonMessage").GetComponent<TextMeshProUGUI>();
         canvas = GameObject.FindWithTag("Canvas");
         InitScene();
     }
@@ -19,6 +25,8 @@ public class GameController : MonoBehaviour
     {
         var currentScene = GetCurrentSceneIndex();
         subMessage.text = "Level " + (currentScene + 1);
+        buttonMessage.text = "Start";
+
         if (currentScene == 0)
         {
             isGameWon = false;
@@ -30,6 +38,8 @@ public class GameController : MonoBehaviour
     {
         if (isGameWon)
         {
+            Tries = 0;
+            TimeSinceGameRunStart += Time.time;
             SceneManager.LoadScene(0);
         }
         else
@@ -62,10 +72,23 @@ public class GameController : MonoBehaviour
         else
         {
             Time.timeScale = 0f;
-            subMessage.text = "You win!";
+            subMessage.text = GetWinningText();
+            buttonMessage.text = "Replay";
             isGameWon = true;
             SetCanvasVisibility(isVisible: true);
         }
+    }
+
+    private static string GetWinningText()
+    {
+        var timePassed = Time.time - TimeSinceGameRunStart; // TODO format
+        var minutes = Mathf.FloorToInt(timePassed / 60);
+        var seconds = Mathf.FloorToInt(timePassed % 60);
+        var formattedTime = $"{minutes:00}:{seconds:00}";
+
+        return "You win!" + "\n"
+            + $"Tries: {Tries + 1}" + "\n"
+            + $"Time: {formattedTime}";
     }
 
     private static void SetCanvasVisibility(bool isVisible)

@@ -15,6 +15,7 @@ public class Ground : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("ground");
+            GameController.Tries++;
             controller.RestartLevel();
         }
     }
