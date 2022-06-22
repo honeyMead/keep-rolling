@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &97338689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad63dccdcf2a64643ad402e86931b557, type: 3}
+  m_PrefabInstance: {fileID: 535529044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &97338693
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97338689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1861163668872946357, guid: a306cd7eeaae3ae428d22186ab8c1124, type: 3}
 --- !u!1001 &535529044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -197,7 +216,7 @@ PrefabInstance:
     - target: {fileID: -5754084199372789682, guid: ad63dccdcf2a64643ad402e86931b557, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -1861163668872946357, guid: a306cd7eeaae3ae428d22186ab8c1124, type: 3}
     - target: {fileID: 919132149155446097, guid: ad63dccdcf2a64643ad402e86931b557, type: 3}
       propertyPath: m_Name
       value: Board01
@@ -307,6 +326,22 @@ PrefabInstance:
     - target: {fileID: 2958017461439815779, guid: 3fbe308e67c2b7f48923041691132e70, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958017461439815779, guid: 3fbe308e67c2b7f48923041691132e70, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958017461439815779, guid: 3fbe308e67c2b7f48923041691132e70, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958017461439815779, guid: 3fbe308e67c2b7f48923041691132e70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958017461439815779, guid: 3fbe308e67c2b7f48923041691132e70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.381
       objectReference: {fileID: 0}
     - target: {fileID: 6744722092154625939, guid: 3fbe308e67c2b7f48923041691132e70, type: 3}
       propertyPath: controller
