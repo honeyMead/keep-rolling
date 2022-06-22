@@ -8,12 +8,9 @@ public class BoardLogic : MonoBehaviour
 
     private Vector3 currentEulerAngles;
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Time.timeSinceLevelLoad > 0.3)
-        {
-            RotateBoard();
-        }
+        RotateBoard();
     }
 
     private void RotateBoard()
